@@ -35,13 +35,13 @@ getXhr: function() {
 // 参数序列化
 serialize: function(url,data) {
     if(!data) return url;
-    url += (url.indexof("?") == -1 ? "?" : "&");
     for (var name in data) {
         if (!data.hasOwnProperty(name)) continue;
         if (typeof data[name] === 'function') continue;
         var value = data[name].toString();
         name = encodeURIComponent(name);
         value = encodeURIComponent(value);
+        url += (url.indexof("?") == -1 ? "?" : "&");
         url += name + "=" + value;
     }
     return url;
