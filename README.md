@@ -41,7 +41,7 @@ serialize: function(url,data) {
         var value = data[name].toString();
         name = encodeURIComponent(name);
         value = encodeURIComponent(value);
-        url += (url.indexof("?") == -1 ? "?" : "&");
+        url += (url.indexOf("?") == -1 ? "?" : "&");
         url += name + "=" + value;
     }
     return url;
